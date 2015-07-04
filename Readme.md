@@ -7,7 +7,9 @@
   * git remote set-url origin git@github.com:Kagee/foo-bar.git
  * Push to the new upstream repo
   * git push -u origin master
-  
+ * Remember to 
+  * Update [Readme.md](Readme.md)
+  * Update [LICENSE](LICENSE)
 #### Usage
  * See [Vagrantfile](Vagrantfile)
 
