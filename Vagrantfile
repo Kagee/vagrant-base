@@ -15,6 +15,7 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "vagrant.example.com"
   config.vm.provision "shell", path: 'setup.sh'
   config.vm.provision "shell", path: 'setup-user.sh', privileged: false
+  config.vm.provision :reload # https://github.com/aidanns/vagrant-reload
 
   # config.vm.network "forwarded_port", guest: 80, host: 8080
   # config.vm.synced_folder '.', '/home/vagrant/setup'
