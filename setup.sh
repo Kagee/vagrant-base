@@ -23,6 +23,11 @@ if [ $IS_VMWARE -gt 0 ] || [ $IS_VBOX -gt 0 ]; then
   fi
 fi
 
+IN_NORWAY=$(curl -q http://ipinfo.io/country 2>&1 | grep -c '^NO$' || true)
+
+if [ $IN_NORWAY -gt 0 ]; then
+  sed -i -e 's|http://us.archive.ubuntu.com|http://no.archive.ubuntu.com|' /etc/apt/sources.list
+fi
 
 # Make debconf use a frontend that expects no interactive input at all, 
 # preventing it from even trying to access stdin.
