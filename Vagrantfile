@@ -38,7 +38,7 @@ Vagrant.configure("2") do |config|
     # vagrant digitalocean-list images $DIGITAL_OCEAN_TOKEN
     provider.image = 'ubuntu-14-04-x64'
     # vagrant digitalocean-list regions $DIGITAL_OCEAN_TOKEN
-    provider.region = 'ams1'
+    provider.region = 'lon1'
     # vagrant digitalocean-list sizes $DIGITAL_OCEAN_TOKEN
     provider.size = '512mb'
   end
