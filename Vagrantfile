@@ -19,6 +19,12 @@ Vagrant.configure("2") do |config|
   # config.vm.network "forwarded_port", guest: 80, host: 8080
   # config.vm.synced_folder '.', '/home/vagrant/setup'
 
+  # Order of preffered providers
+  config.vm.provider "virtualbox"
+  config.vm.provider "vmware"
+  config.vm.provider "vmware_fusion"
+  config.vm.provider "digital_ocean"
+
   # https://github.com/smdahlen/vagrant-digitalocean/
   # Use "DO_TOKEN=<token> vagrant up --provider=digital_ocean" to setup a
   # droplet on DigitalOcean, not a Virtualbox/Vmware guest.
