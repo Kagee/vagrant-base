@@ -1,6 +1,6 @@
 #! /bin/bash
-set -e
-set -x
+#set -e
+#set -x
 
-cd /vagrant/
-whoami
+#cd /home/vagrant/
+#whoami
