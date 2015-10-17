@@ -23,9 +23,12 @@ if [ $IS_VMWARE -gt 0 ] || [ $IS_VBOX -gt 0 ]; then
   fi
 fi
 
+apt-get --yes update
+
+apt-get --yes upgrade
 
 # Some standard tools
-apt-get install --yes language-pack-nb vim htop most git
+apt-get install --yes language-pack-nb vim htop git
 
 cd /root
 
