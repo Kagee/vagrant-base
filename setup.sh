@@ -23,6 +23,11 @@ if [ $IS_VMWARE -gt 0 ] || [ $IS_VBOX -gt 0 ]; then
   fi
 fi
 
+
+# Make debconf use a frontend that expects no interactive input at all, 
+# preventing it from even trying to access stdin.
+export DEBIAN_FRONTEND=noninteractive
+
 apt-get --yes update
 
 apt-get --yes upgrade
