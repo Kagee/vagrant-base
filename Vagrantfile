@@ -20,6 +20,12 @@ Vagrant.configure("2") do |config|
   # config.vm.network "forwarded_port", guest: 80, host: 8080
   # config.vm.synced_folder '.', '/home/vagrant/setup'
 
+  config.vm.provider 'virtualbox' do |v|
+    v.linked_clone = true if Gem::Version.new(Vagrant::VERSION) >= Gem::Version.new('1.8.0')
+    v.memory = 2048
+    v.cpus = 2
+  end
+
   # Order of preffered providers
   config.vm.provider "virtualbox"
   config.vm.provider "vmware"
