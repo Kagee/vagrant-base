@@ -13,8 +13,9 @@ Vagrant.configure("2") do |config|
   # For other boxes, see https://vagrantcloud.com/boxcutter
   config.vm.box = "boxcutter/ubuntu1610"
   config.vm.hostname = "vagrant.example.com"
-  config.vm.provision "shell", path: 'setup.sh'
-  config.vm.provision "shell", path: 'setup-user.sh', privileged: false
+  config.vm.provision "shell", path: 'default-setup.sh'
+  config.vm.provision "shell", path: 'root-setup.sh', privileged: false
+  config.vm.provision "shell", path: 'user-setup.sh', privileged: false
   config.vm.provision :reload # https://github.com/aidanns/vagrant-reload
 
   # config.vm.network "forwarded_port", guest: 80, host: 8080
