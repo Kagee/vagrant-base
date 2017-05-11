@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
 
   # Ubuntu 14.04 Server 64-bit box supporting VirtualBox and VMware providers. 
   # For other boxes, see https://vagrantcloud.com/boxcutter
-  config.vm.box = "boxcutter/ubuntu1404"
+  config.vm.box = "boxcutter/ubuntu1610"
   config.vm.hostname = "vagrant.example.com"
   config.vm.provision "shell", path: 'setup.sh'
   config.vm.provision "shell", path: 'setup-user.sh', privileged: false
