@@ -40,6 +40,8 @@ apt-get --yes update
 
 apt-get --yes upgrade
 
+apt-get --yes dist-upgrade
+
 # Some standard tools
 apt-get install --yes language-pack-nb vim htop git
 
